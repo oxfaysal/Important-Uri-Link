@@ -26,3 +26,7 @@ https://img.youtube.com/vi/<insert-youtube-video-id-here>/2.jpg
 https://img.youtube.com/vi/<insert-youtube-video-id-here>/3.jpg
 ```
 
+
+###### © All right reserved by Faysal
+
+
