@@ -1,5 +1,24 @@
 # Important Uri Link
 
+### Website URI
+```
+final Uri _websiteUri = Uri.parse("https://flutter.dev");
+```
+
+### Phone call URI
+```
+final Uri _phoneUri = Uri(scheme: 'tel', path: '+880123456789');
+```
+
+### Email URI
+```
+final Uri _emailUri = Uri(
+  scheme: 'mailto',
+  path: 'example@email.com',
+  query: 'subject=Hello&body=This is a test email',
+);
+```
+
 ### Go to Whatsapp
 
 ```
