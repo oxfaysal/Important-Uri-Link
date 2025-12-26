@@ -6,8 +6,34 @@ final Uri _websiteUri = Uri.parse("https://flutter.dev");
 ```
 
 ### Phone call URI
+
+##### Manifest
 ```
-final Uri _phoneUri = Uri(scheme: 'tel', path: '+880123456789');
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+            <data android:scheme="tel"/>
+        </intent>
+    </queries>
+```
+##### url_launcher package install
+
+#### Function
+```
+Future<void> makePhoneCall(String phone) async {
+  final Uri launchUri = Uri(scheme: 'tel', path: phone);
+
+  if (await canLaunchUrl(launchUri)) {
+    await launchUrl(launchUri);
+  } else{
+    debugPrint('Could not launch $phone');
+  }
+}
+```
+
+#### OnPress
+```
+onPressed: () {makePhoneCall(phone);},
 ```
 
 ### Email URI
